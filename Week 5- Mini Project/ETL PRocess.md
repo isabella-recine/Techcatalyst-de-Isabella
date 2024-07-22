@@ -8,7 +8,7 @@ spark.conf.set("fs.s3a.access.key", "ACCESS KEY")
 spark.conf.set("fs.s3a.secret.key","SECRET KEY")
 ```
 
-Once the files where in databricks 
+Once the files where in databricks, I started the transformation process. This process involved me seelcting columns, transforming data types, creating new columns, and putting certain columns into new tables for further analysis. After the trasnformations, I sent the new tables into S3 parquet files using the same addess and secret key I used to pull the data from S3.
 
 ### SQL Querying
 Here are the DDl scripes I used in Snowflake to further query the data and verify the results:
