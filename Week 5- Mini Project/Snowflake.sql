@@ -1,5 +1,3 @@
-``` SQL
-
 create TRANSIENT TABLE TECHCATALYST_DE.ir.SONGS_DIM (
          song_id VARCHAR(100),
          title VARCHAR(100),
@@ -118,5 +116,3 @@ SELECT
     REGEXP_SUBSTR(METADATA$FILENAME, 'year=(\\d+)', 1, 1, 'e')::STRING AS PARTITION_YEAR,
     REGEXP_SUBSTR(METADATA$FILENAME, 'artist_id=([^/]+)', 1, 1, 'e')::STRING AS PARTITION_ARTIST_ID
 FROM @techcatalyst_de.external_stage.ir_stage/songs_table/ (FILE_FORMAT => 'ir_parquet_format', PATTERN => '.*parquet.*');
-
-```
